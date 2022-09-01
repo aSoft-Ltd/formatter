@@ -30,7 +30,7 @@ fun includeSubs(base: String, path: String = base, vararg subs: String) {
     }
 }
 
-val tmp = 2
+val tmp = 1
 
 rootProject.name = "asoft"
 
@@ -38,4 +38,4 @@ rootProject.name = "asoft"
 includeSubs("functions", "../functions", "core")
 includeSubs("expect", "../expect", "core")
 
-includeSubs("formatter", ".", "api")
+includeSubs("formatter", ".", "core")
