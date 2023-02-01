@@ -1,8 +1,9 @@
+@file:JsExport
+
 package formatter
 
 import kotlin.js.JsExport
 
-@JsExport
-interface Formatter<T> {
+interface Formatter<in T> {
     fun format(o: T): String
 }
