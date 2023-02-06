@@ -28,5 +28,3 @@ fun Number.format(
     decimalSeparator,
     thousandsSeparator
 ).format(this)
-
-fun Number.format(formatter: Formatter<Number>) = formatter.format(this)

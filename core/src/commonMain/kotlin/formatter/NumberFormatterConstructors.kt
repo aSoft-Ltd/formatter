@@ -1,5 +1,8 @@
 package formatter
 
+import formatter.internal.NumberFormatterImpl
+import kotlin.jvm.JvmOverloads
+
 fun NumberFormatter(
     abbreviate: Boolean = NumberFormatterOptions.DEFAULT_ABBREVIATE,
     prefix: String = NumberFormatterOptions.DEFAULT_PREFIX,
@@ -19,3 +22,8 @@ fun NumberFormatter(
         thousandsSeparator
     )
 )
+
+@JvmOverloads
+inline fun NumberFormatter(
+    options: NumberFormatterRawOptions = NumberFormatterOptions()
+): NumberFormatter = NumberFormatterImpl(options)
